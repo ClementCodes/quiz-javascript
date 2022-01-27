@@ -1,1 +1,98 @@
 /** @format */
+*,
+::before ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Concert One", cursive;
+  background-color: rgb(124, 200, 216);
+}
+
+h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 40px;
+}
+.form-quiz {
+  display: flex;
+}
+.question-block {
+  background-color: rgba(223, 81, 42, 0.592);
+  color: rgb(27, 87, 58);
+  padding-left: 1%;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 700px;
+  height: 200px;
+  box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.5);
+  border: 1px rgb(114, 120, 132) solid;
+  border-radius: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.question-block div {
+  padding: 10px 0px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.question-block div input {
+  width: 10px;
+  height: 10px;
+  border: brown 2px solid;
+}
+.resultats {
+  background-color: lightcyan;
+  width: 60%;
+  padding: 25px;
+
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.aide {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+form button {
+  padding: 10px 10px 10px;
+  border-radius: 12px;
+  border: 1px solid black;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button {
+  background-color: lightcoral;
+}
+form button:hover {
+  background-color: rgb(153, 217, 240);
+}
+
+.echec {
+  animation: echec 0.3s ease-in-out;
+}
+/* //pour parametre il faut prendre le nom "echec "qui est specificque a css que tu reutlilses en dessous  
+ensuite les pixels en dessous sont fait pour bouger et donc etirer la transfomattions  */
+
+@keyframes echec {
+  0% {
+    transform: translateX(0px);
+  }
+  33% {
+    transform: translateX(5px);
+  }
+  66% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
